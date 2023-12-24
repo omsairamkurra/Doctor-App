@@ -12,6 +12,8 @@ app.use(express.json());
 app.use(morgan("dev"));
 
 app.use("/api/v1/user", require("./routes/userRoute"));
+app.use("/api/v1/admin", require("./routes/adminRoutes"));
+app.use("/api/v1/doctor", require("./routes/doctorRoute"));
 
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
